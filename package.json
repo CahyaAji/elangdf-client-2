@@ -1,0 +1,17 @@
+{
+  "name": "elangdf-electronjs",
+  "version": "0.1.0",
+  "description": "Desktop App client for CNS-DF",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "CahyaAji",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^30.0.7"
+  },
+  "dependencies": {
+    "utm": "^1.1.1"
+  }
+}
