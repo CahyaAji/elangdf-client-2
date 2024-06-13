@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "Desktop App client for CNS-DF",
   "main": "main.js",
+  "productName": "CNS-01-DF",
   "scripts": {
     "start": "electron ."
   },
@@ -10,7 +11,7 @@
   "license": "ISC",
   "devDependencies": {
     "electron": "^30.0.7",
-    "electron-builder": "^24.13.3"
+    "electron-packager": "^17.1.2"
   },
   "dependencies": {
     "utm": "^1.1.1"
