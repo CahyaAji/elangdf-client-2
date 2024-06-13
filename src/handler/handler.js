@@ -143,7 +143,7 @@ function turnOffDF(fetchURL) {
 
   showNotifBox(
     "System",
-    "System akan mati dalam 1 menit. Jangan langsung matikan sumber power!"
+    "System akan mati dalam 1 menit.<br> Jangan langsung matikan sumber power!"
   );
   window.NodeFn.closeApp();
 }
