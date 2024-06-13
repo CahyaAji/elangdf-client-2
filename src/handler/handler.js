@@ -254,7 +254,7 @@ function saveCoord() {
   };
   const dataString = JSON.stringify(saveData);
 
-  window.NodeFn.writeFile("test.json", dataString, "utf8")
+  window.NodeFn.writeFile("data-coord.json", dataString, "utf8")
     .then(() => {
       console.log("write success");
     })
@@ -264,7 +264,7 @@ function saveCoord() {
 }
 
 function readSavedCoord() {
-  window.NodeFn.readFile("test.json", "utf8")
+  window.NodeFn.readFile("data-coord.json", "utf8")
     .then((data) => {
       const jsonConf = JSON.parse(data);
       document.getElementById("input-lat").value = jsonConf.latDms || "";
