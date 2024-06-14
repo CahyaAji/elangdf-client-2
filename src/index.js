@@ -1,5 +1,5 @@
-const urlDF = "http://10.42.0.98:8087";
-// const urlDF = "http://localhost:3000";
+// const urlDF = "http://10.42.0.98:8087";
+const urlDF = "http://localhost:3000";
 
 let btnKeyPressed = "";
 let currentView = "";
@@ -27,8 +27,6 @@ const btnRefresh = document.getElementById("btn-refresh-side");
 
 const notifBox = document.getElementsByClassName("notif-box");
 const notif = document.getElementById("notif");
-
-notif.innerHTML = "TEST";
 
 function setDisplayDF() {
   startFetchIntervalDF(urlDF);

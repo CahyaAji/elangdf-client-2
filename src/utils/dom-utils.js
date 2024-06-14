@@ -1,6 +1,5 @@
 function getNextFocusElement(currentElement, id) {
   const focusableElements = getFocusableElementsWithinId(id);
-
   const currentIndex = focusableElements.indexOf(currentElement);
 
   if (currentIndex === -1 || currentIndex === focusableElements.length - 1) {
