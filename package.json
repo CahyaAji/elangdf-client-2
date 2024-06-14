@@ -14,16 +14,5 @@
   },
   "dependencies": {
     "utm": "^1.1.1"
-  },
-  "build": {
-    "appId": "com.scmca.cns",
-    "productName": "CNS-01-DF",
-    "directories": {
-      "output": "dist"
-    },
-    "linux": {
-      "target": "deb",
-      "icon": "src/assets/icon.png"
-    }
   }
 }
