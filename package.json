@@ -26,7 +26,9 @@
     },
     "files": [
       "src/**/*",
-      "main.js"
+      "main.js",
+      "preload.js",
+      "node_modules/**/*"
     ],
     "linux": {
       "target": [
