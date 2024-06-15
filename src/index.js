@@ -1,5 +1,5 @@
-// const urlDF = "http://10.42.0.98:8087";
-const urlDF = "http://localhost:3000";
+const urlDF = "http://192.168.17.17:8087";
+// const urlDF = "http://localhost:3000";
 
 let btnKeyPressed = "";
 let currentView = "";
