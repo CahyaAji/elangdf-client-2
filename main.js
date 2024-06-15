@@ -26,6 +26,7 @@ function createWindow() {
       contextIsolation: true,
       preload: path.join(__dirname, "preload.js"),
     },
+    icon: path.join(__dirname, "src/assets/icons/icon.png"),
   });
 
   mainWindow.setMinimumSize(1000, 520);
