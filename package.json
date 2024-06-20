@@ -1,7 +1,7 @@
 {
   "name": "elangdf-electronjs",
   "version": "2.1.3",
-  "description": "Desktop App client for CNS-DF",
+  "description": "App for CNS-DF",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
@@ -22,7 +22,8 @@
     "extraMetadata": {
       "name": "CNS-DF",
       "version": "2.1.3",
-      "description": "Desktop App client for CNS-DF"
+      "description": "Desktop App client for CNS-DF",
+      "maintainer": "scm"
     },
     "files": [
       "src/**/*",
