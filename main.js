@@ -5,13 +5,13 @@ let mainWindow;
 
 function createWindow() {
   const displays = screen.getAllDisplays();
-  let windowScreen;
+  const windowScreen = displays[0];
 
-  if (displays.length >= 2) {
-    windowScreen = displays[1];
-  } else {
-    windowScreen = displays[0];
-  }
+  // if (displays.length >= 2) {
+  //   windowScreen = displays[1];
+  // } else {
+  //   windowScreen = displays[0];
+  // }
 
   mainWindow = new BrowserWindow({
     x: windowScreen.bounds.x,
