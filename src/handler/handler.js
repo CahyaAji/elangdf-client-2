@@ -54,6 +54,11 @@ function setFreq(fetchURL) {
     return;
   }
 
+  if (centerFreq > 1000) {
+    showNotifBox("Error", "Frekuensi DF tidak boleh lebih dari 1000");
+    return;
+  }
+
   const centerFreqValue = parseFloat(centerFreq);
 
   const antSpace = centerFreqValue >= 250 ? 0.25 : 0.45;
