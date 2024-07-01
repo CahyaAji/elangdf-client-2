@@ -55,7 +55,7 @@ function setFreq(fetchURL) {
   }
 
   if (centerFreq > 1000) {
-    showNotifBox("Error", "Frekuensi DF tidak boleh lebih dari 1000");
+    showNotifBox("Error", "Frekuensi tidak boleh lebih dari 1000 Mhz");
     return;
   }
 
