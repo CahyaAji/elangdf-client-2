@@ -59,6 +59,11 @@ function setFreq(fetchURL) {
     return;
   }
 
+  if (centerFreq < 24) {
+    showNotifBox("Error", "Frekuensi tidak boleh kurang dari 24 Mhz");
+    return;
+  }
+
   const centerFreqValue = parseFloat(centerFreq);
 
   const antSpace = centerFreqValue >= 250 ? 0.25 : 0.45;
