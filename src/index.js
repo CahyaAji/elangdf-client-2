@@ -198,9 +198,17 @@ function prevMenu() {
 
 function okMenu() {
   if (btnKeyPressed === "btn-set-freq-gain") {
+    setFreqGainBtn.disabled = true;
+    setTimeout(() => {
+      setFreqGainBtn.disabled = false;
+    }, 1000);
     setFreq(urlDF);
   }
   if (btnKeyPressed === "btn-set-station-id") {
+    setStationBtn.disabled = true;
+    setTimeout(() => {
+      setStationBtn.disabled = false;
+    }, 1000);
     setStationId(urlDF);
   }
   if (btnKeyPressed === "btn-read-gps") {
@@ -208,22 +216,42 @@ function okMenu() {
   }
 
   if (btnKeyPressed === "btn-convert-utm") {
+    latlngToUtmBtn.disabled = true;
+    setTimeout(() => {
+      latlngToUtmBtn.disabled = false;
+    }, 1000);
     convertLatLngToUtm();
   }
 
   if (btnKeyPressed === "btn-set-compass-offset") {
+    setCmpsOffsBtn.disabled = true;
+    setTimeout(() => {
+      setCmpsOffsBtn.disabled = false;
+    }, 1000);
     setCompassOffset();
   }
 
   if (btnKeyPressed === "btn-save-coord-config") {
+    saveCoordBtn.disabled = true;
+    setTimeout(() => {
+      saveCoordBtn.disabled = false;
+    }, 1000);
     saveCoord();
   }
 
   if (btnKeyPressed === "btn-restart") {
+    restartBtn.disabled = true;
+    setTimeout(() => {
+      restartBtn.disabled = false;
+    }, 1000);
     restartDF(urlDF);
   }
 
   if (btnKeyPressed === "btn-turnoff") {
+    turnOffBtn.disabled = true;
+    setTimeout(() => {
+      turnOffBtn.disabled = false;
+    }, 1000);
     turnOffDF(urlDF);
   }
 }
@@ -311,18 +339,34 @@ const setCmpsOffsBtn = document.getElementById("btn-set-compass-offset");
 const saveCoordBtn = document.getElementById("btn-save-coord-config");
 
 setFreqGainBtn.addEventListener("click", () => {
+  setFreqGainBtn.disabled = true;
+  setTimeout(() => {
+    setFreqGainBtn.disabled = false;
+  }, 1000);
   setFreq(urlDF);
 });
 
 setStationBtn.addEventListener("click", () => {
+  setStationBtn.disabled = true;
+  setTimeout(() => {
+    setStationBtn.disabled = false;
+  }, 1000);
   setStationId(urlDF);
 });
 
 turnOffBtn.addEventListener("click", () => {
+  turnOffBtn.disabled = true;
+  setTimeout(() => {
+    turnOffBtn.disabled = false;
+  }, 1000);
   turnOffDF(urlDF);
 });
 
 restartBtn.addEventListener("click", () => {
+  restartBtn.disabled = true;
+  setTimeout(() => {
+    restartBtn.disabled = false;
+  }, 1000);
   restartDF(urlDF);
 });
 
@@ -333,13 +377,25 @@ readGpsBtn.addEventListener("click", () => {
 });
 
 latlngToUtmBtn.addEventListener("click", () => {
+  latlngToUtmBtn.disabled = true;
+  setTimeout(() => {
+    latlngToUtmBtn.disabled = false;
+  }, 1000);
   convertLatLngToUtm();
 });
 
 saveCoordBtn.addEventListener("click", () => {
+  saveCoordBtn.disabled = true;
+  setTimeout(() => {
+    saveCoordBtn.disabled = false;
+  }, 1000);
   saveCoord();
 });
 
 setCmpsOffsBtn.addEventListener("click", () => {
+  setCmpsOffsBtn.disabled = true;
+  setTimeout(() => {
+    setCmpsOffsBtn.disabled = false;
+  }, 1000);
   setCompassOffset();
 });
