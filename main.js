@@ -38,24 +38,39 @@ function createWindow() {
   });
 }
 
-app.whenReady().then(() => {
-  createWindow();
+// Ensure only one instance of the app is running
+const gotTheLock = app.requestSingleInstanceLock();
 
-  app.on("activate", () => {
-    if (BrowserWindow.getAllWindows().length === 0) {
-      createWindow();
+if (!gotTheLock) {
+  app.quit();
+} else {
+  app.whenReady().then(() => {
+    createWindow();
+
+    app.on("activate", () => {
+      if (BrowserWindow.getAllWindows().length === 0) {
+        createWindow();
+      }
+    });
+  });
+
+  app.on("second-instance", () => {
+    // Focus the main window if a second instance is attempted to be opened
+    if (mainWindow) {
+      if (mainWindow.isMinimized()) mainWindow.restore();
+      mainWindow.focus();
     }
   });
-});
 
-app.on("window-all-closed", () => {
-  if (process.platform !== "darwin") {
-    app.quit();
-  }
-});
+  app.on("window-all-closed", () => {
+    if (process.platform !== "darwin") {
+      app.quit();
+    }
+  });
 
-ipcMain.on("close-app", () => {
-  setTimeout(() => {
-    app.quit();
-  }, 3000);
-});
+  ipcMain.on("close-app", () => {
+    setTimeout(() => {
+      app.quit();
+    }, 3000);
+  });
+}
