@@ -1,17 +1,23 @@
 const { app, BrowserWindow, ipcMain, screen } = require("electron/main");
 const path = require("node:path");
+const os = require("os");
 
 let mainWindow;
 
 function createWindow() {
   const displays = screen.getAllDisplays();
-  const windowScreen = displays[0];
+  const hostname = os.hostname();
+  let windowScreen;
 
-  // if (displays.length >= 2) {
-  //   windowScreen = displays[1];
-  // } else {
-  //   windowScreen = displays[0];
-  // }
+  if (hostname === "cns-016") {
+    if (displays.length >= 2) {
+      windowScreen = displays[1];
+    } else {
+      windowScreen = displays[0];
+    }
+  } else {
+    windowScreen = displays[0];
+  }
 
   mainWindow = new BrowserWindow({
     x: windowScreen.bounds.x,
