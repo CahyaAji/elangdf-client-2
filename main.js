@@ -9,7 +9,17 @@ function createWindow() {
   const hostname = os.hostname();
   let windowScreen;
 
-  if (hostname === "cns-016") {
+  // if (hostname === "cns-016") {
+  //   if (displays.length >= 2) {
+  //     windowScreen = displays[1];
+  //   } else {
+  //     windowScreen = displays[0];
+  //   }
+  // } else {
+  //   windowScreen = displays[0];
+  // }
+
+  if (hostnameType(hostname)) {
     if (displays.length >= 2) {
       windowScreen = displays[1];
     } else {
@@ -79,4 +89,12 @@ if (!gotTheLock) {
       app.quit();
     }, 3000);
   });
+}
+
+function hostnameType(hostname) {
+  if (hostname.startsWith("cns-")) {
+    const number = parseInt(hostname.substring(4));
+    return number === 16 || number >= 18;
+  }
+  return false;
 }
